@@ -1,8 +1,8 @@
 /*
-Created by Binslev, credit to Meta, Wub, AlexYeahNot, Vlad2D and Sviat
+Created by Binslev, credit to Meta, Wub, AlexYeahNot, Vlad2D, Sviat and Ero
 Load remover for version 1.4, 1.7 and 1.10
 Autosplitter for version 1.4 and 1.10
-Last updated 08-03-2024 (DD-MM-YYYY)
+Last updated 09-03-2024 (DD-MM-YYYY)
 "loading" variables always equals 2 during load screens, and 0 otherwise
 "mainmission" variables start at 0, and go up by 1 every time a main story mission is completed
 */
