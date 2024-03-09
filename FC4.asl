@@ -39,20 +39,7 @@ startup
     {
     // Asks user to change to game time if LiveSplit is currently set to real time.
 
-	if (timer.CurrentTimingMethod == TimingMethod.RealTime)
-    {        
-        var timingMessage = MessageBox.Show 
-        ("This game uses Load Removed Time (Game Time) as the timing method.\n"+
-        "LiveSplit is currently set to compare against Real Time (RTA).\n"+
-        "Would you like to set the timing method to Game Time?",
-        "LiveSplit | Far Cry 4",
-        MessageBoxButtons.YesNo,MessageBoxIcon.Question);
-
-        if (timingMessage == DialogResult.Yes)
-            {
-                timer.CurrentTimingMethod = TimingMethod.GameTime;
-            }
-        }
+	    vars.Helper.AlertLoadless();
     }
 }
 
@@ -62,28 +49,13 @@ init
 {
 //switches between versions via the MD5 hash of the FC64.DLL file, used by the currently running game version.
 
-    using (FileStream gameProcess = File.Open(modules.First().FileName, FileMode.Open, FileAccess.Read, FileShare.ReadWrite)) 
-    {
-        string gameProcessDirectory = Path.GetDirectoryName(gameProcess.Name);
-        using (System.Security.Cryptography.MD5 md5 = System.Security.Cryptography.MD5.Create())
-        {
-            string dllFilePath = Path.Combine(gameProcessDirectory, "FC64.dll");
-            if (File.Exists(dllFilePath))
-            {
-                using (FileStream gameProcessDLL = File.Open(dllFilePath, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
-                {
-                    byte[] MD5HashBytes = md5.ComputeHash(gameProcessDLL);
-                    string MD5Hash = BitConverter.ToString(MD5HashBytes).Replace("-", "").ToLower();
+    string MD5Hash = vars.Helper.GetMD5Hash("FC64.dll").ToLower();
 
-                    switch (MD5Hash)
-                    {
-                        case "f3fc6a3c6e1fd99711e53686dd80d2fb": version = "v1.4"; break;
-                        case "1c16edfb3bb6ca77811602c660f4ac3c": version = "v1.7"; break;
-                        case "cbfccf70b8811d26c4dc5acf753c159a": version = "v1.10"; break;
-                    }
-                }
-            }
-        }
+    switch (MD5Hash)
+    {
+        case "f3fc6a3c6e1fd99711e53686dd80d2fb": version = "v1.4"; break;
+        case "1c16edfb3bb6ca77811602c660f4ac3c": version = "v1.7"; break;
+        case "cbfccf70b8811d26c4dc5acf753c159a": version = "v1.10"; break;
     }
 }
 
@@ -109,9 +81,9 @@ split
 { 	
 //split every time mainmission variable goes up by 1, if the setting for that specific split is checked in the settings.
 
-if (current.mainmission == old.mainmission + 1 && settings["MM" + current.mainmission])
+    if (current.mainmission == old.mainmission + 1 && settings["MM" + current.mainmission])
     {
-    return true;
+        return true;
     }
 }
 
