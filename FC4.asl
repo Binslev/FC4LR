@@ -60,7 +60,7 @@ startup
 
 init
 {
-//switches between versions 1.4 and 1.10 depending on the MD5 hash of the FC64.DLL file used by the currently running game version
+//switches between versions via the MD5 hash of the FC64.DLL file, used by the currently running game version.
 
     using (FileStream gameProcess = File.Open(modules.First().FileName, FileMode.Open, FileAccess.Read, FileShare.ReadWrite)) 
     {
