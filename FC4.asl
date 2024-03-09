@@ -21,7 +21,7 @@ state("FarCry4", "v1.7")
 state("FarCry4", "v1.10")
 {
 	int loading : "FC64.dll", 0x02E23C98, 0x20, 0x18, 0x30, 0x18, 0x24;
-    int mainmission : "FC64.dll", 0X02E2C0A0, 0x70, 0x18;
+    	int mainmission : "FC64.dll", 0X02E2C0A0, 0x70, 0x18;
 }
 
 
