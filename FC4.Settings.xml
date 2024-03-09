@@ -1,0 +1,36 @@
+<!--Last updated 08-03-2024 (DD-MM-YYYY)-->
+<Settings>
+    <Setting Id="Main_Missions" Label="Split When Completing a Main Mission" State="true">
+        <Setting Id="MM1" Label="1. Prologue (Leave the dining room)" State="true"/> <!--A.k.A. "A Royal Reception"-->
+        <Setting Id="MM2" Label="2. Prologue (Escape in the truck)" State="true"/> <!--A.k.A. "A Dark Place"-->
+        <Setting Id="MM3" Label="3. Prologue (Avalanche)" State="true"/> <!--A.k.A. "Banapur"-->
+        <Setting Id="MM4" Label="4. Mission" State="true"/> <!--"The Wolves Den (A)" or "Propaganda Machine (S)"-->
+        <Setting Id="MM5" Label="5. Mission" State="true"/> <!--"The Wolves Den (A)" or "Propaganda Machine (S)"-->
+        <Setting Id="MM6" Label="6. Return to sender" State="true"/>
+        <Setting Id="MM7" Label="7. Hostage Negotiation" State="true"/>
+        <Setting Id="MM8" Label="8. Incursion" State="true"/>
+        <Setting Id="MM9" Label="9. Mission" State="true"/> <!--"Hunt or Be Hunted (A)" or "Rebel Yell (S)"-->
+        <Setting Id="MM10" Label="10. Mission" State="true"/>
+        <Setting Id="MM11" Label="11. Mission" State="true"/>
+        <Setting Id="MM12" Label="12. Mission" State="true"/>
+        <Setting Id="MM13" Label="13. Mission" State="true"/>
+        <Setting Id="MM14" Label="14. Mission" State="true"/>
+        <Setting Id="MM15" Label="15. Mission" State="true"/>
+        <Setting Id="MM16" Label="16. Mission" State="true"/>
+        <Setting Id="MM17" Label="17. Mission" State="true"/>
+        <Setting Id="MM18" Label="18. Mission" State="true"/>
+        <Setting Id="MM19" Label="19. Mission" State="true"/>
+        <Setting Id="MM20" Label="20. Mission" State="true"/>
+        <Setting Id="MM21" Label="21. Mission" State="true"/>
+        <Setting Id="MM22" Label="22. Mission" State="true"/>
+        <Setting Id="MM23" Label="23. Mission" State="true"/>
+        <Setting Id="MM24" Label="24. Key To The North" State="true"/>
+        <Setting Id="MM25" Label="25. Truth And Justice" State="true"/>
+        <Setting Id="MM26" Label="26. Payback" State="true"/>
+        <Setting Id="MM27" Label="27. Mission" State="true"/> <!--"Culture Wars (A)" or "Cease and Desist (S)"-->
+        <Setting Id="MM28" Label="28. Mission" State="true"/> <!--"The Valley of Death (A)" or "Take Cover (S)"-->
+        <Setting Id="MM29" Label="29. Reap What You Sow" State="true"/>
+        <Setting Id="MM30" Label="30. Ashes To Ashes" State="true"/>
+        <Setting Id="MM31" Label="31. Dinner At The Palace" State="true"/>
+    </Setting>
+</Settings>
