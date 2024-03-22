@@ -57,6 +57,12 @@ init
         case "1c16edfb3bb6ca77811602c660f4ac3c": version = "v1.7"; break;
         case "cbfccf70b8811d26c4dc5acf753c159a": version = "v1.10"; break;
     }
+
+    {
+    //pauses game timer if the game is closed
+	timer.IsGameTimePaused = false;
+	game.Exited += (s, e) => timer.IsGameTimePaused = true;
+    }
 }
 
 
