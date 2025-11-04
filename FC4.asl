@@ -1,8 +1,8 @@
 /*
 Created by Binslev, credit to Meta, Wub, AlexYeahNot, Vlad2D, Sviat and Ero
-Load remover for version 1.4, 1.7 and 1.10
-Autosplitter for version 1.4 and 1.10
-Last updated 09-03-2024 (DD-MM-YYYY)
+Load remover for version 1.4, 1.7, 1.10 and 1.12
+Autosplitter for version 1.4, 1.10 and 1.12
+Last updated 04-11-2025 (DD-MM-YYYY)
 "loading" variables always equals 2 during load screens, and 0 otherwise
 "mainmission" variables start at 0, and go up by 1 every time a main story mission is completed
 */
@@ -28,6 +28,12 @@ state("FarCry4", "v1.10_ubi")
 {
 	int loading : "FC64.dll", 0x02E23C98, 0x20, 0x18, 0x30, 0x18, 0x24;
     	int mainmission : "FC64.dll", 0X02E2C0A0, 0x70, 0x18;
+}
+
+state("FarCry4", "v1.titties_steam") //v1.12
+{
+	int loading : "FC64.dll", 0x02E21978, 0x300, 0x588, 0x24;
+    	int mainmission : "FC64.dll", 0x02E2A150, 0x70, 0x18;
 }
 
 
@@ -63,6 +69,7 @@ init
         case "1c16edfb3bb6ca77811602c660f4ac3c": version = "v1.7"; break;
         case "cbfccf70b8811d26c4dc5acf753c159a": version = "v1.10_steam"; break;
         case "d1cd0bb9d8fe42277b163b162d107ea7": version = "v1.10_ubi"; break;
+		case "0e60e76f0a0291275aeb5cb2f6055daf": version = "v1.titties_steam"; break; //v1.12
     }
 
     {
@@ -106,3 +113,4 @@ isLoading
 {
 	return current.loading == 2;
 }
+
