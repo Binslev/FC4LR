@@ -1,5 +1,5 @@
 /*
-Created by Binslev, credit to Meta, Wub, AlexYeahNot, Vlad2D, Sviat and Ero
+Created by Binslev, credit to Meta, Wub, AlexYeahNot, Vlad2D, Sviat, Ero and Capone
 Load remover for version 1.4, 1.7, 1.10 and 1.12
 Autosplitter for version 1.4, 1.10 and 1.12
 Last updated 04-11-2025 (DD-MM-YYYY)
@@ -113,6 +113,7 @@ isLoading
 {
 	return current.loading == 2;
 }
+
 
 
 
