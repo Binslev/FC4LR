@@ -32,7 +32,7 @@ state("FarCry4", "v1.10_ubi")
 
 state("FarCry4", "v1.titties") //v1.12
 {
-	int loading : "FC64.dll", 0x02E21978, 0x300, 0x588, 0x24;
+	int loading : "FC64.dll", 0x02E21E48, 0x20, 0x280, 0x60;
     	int mainmission : "FC64.dll", 0x02E2A150, 0x70, 0x18;
 }
 
@@ -113,5 +113,6 @@ isLoading
 {
 	return current.loading == 2;
 }
+
 
 
